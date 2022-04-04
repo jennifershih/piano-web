@@ -6,15 +6,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, inject } from "vue";
+import { synthInjectionKey } from "@/types/synth-injection-key";
 
 export default defineComponent({
+  setup() {
+    const synth = inject(synthInjectionKey);
+    return { synth };
+  },
   props: {
     isBlack: Boolean,
   },
   methods: {
-    play: function () {
-      console.log("play");
+    play() {
+      this.synth?.triggerAttackRelease("c4", "8n");
     },
   },
 });
