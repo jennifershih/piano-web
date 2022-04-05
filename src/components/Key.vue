@@ -15,11 +15,19 @@ export default defineComponent({
     return { synth };
   },
   props: {
-    isBlack: Boolean,
+    note: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    isBlack() {
+      return this.note.includes("#");
+    },
   },
   methods: {
     play() {
-      this.synth?.triggerAttackRelease("c4", "8n");
+      this.synth?.triggerAttackRelease(this.note, "8n");
     },
   },
 });

@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Key />
-    <Key :is-black="true" />
-    <Key />
-    <Octave />
-    <Octave />
-    <Octave />
-    <Octave />
-    <Octave />
-    <Octave />
-    <Octave />
-    <Key />
+    <Key :note="`A0`" />
+    <Key :note="`A#0`" />
+    <Key :note="`B0`" />
+    <Octave :number="1" />
+    <Octave :number="2" />
+    <Octave :number="3" />
+    <Octave :number="4" />
+    <Octave :number="5" />
+    <Octave :number="6" />
+    <Octave :number="7" />
+    <Key :note="`C8`" />
   </div>
 </template>
 
