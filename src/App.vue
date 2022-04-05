@@ -14,4 +14,6 @@
   </main>
 </template>
 
-<style></style>
+<style lang="scss">
+@import "@/assets/styles.scss";
+</style>
