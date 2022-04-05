@@ -1,17 +1,19 @@
 <template>
-  <h1>This is a Piano page</h1>
-  <button @click="unmute">Unmute</button>
-  <Keyboard />
+  <div class="fixed-bottom">
+    <ControlPanel />
+    <Keyboard />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, provide } from "vue";
 import { start, Synth } from "tone";
 import Keyboard from "@/components/Keyboard.vue";
+import ControlPanel from "@/components/ControlPanel.vue";
 import { synthInjectionKey } from "@/types/synth-injection-key";
 
 export default defineComponent({
-  components: { Keyboard },
+  components: { Keyboard, ControlPanel },
   setup() {
     const synth = new Synth();
     provide(synthInjectionKey, synth);
@@ -27,5 +29,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style></style>

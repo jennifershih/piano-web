@@ -1,8 +1,12 @@
 <template>
   <button
-    v-on:click="play"
-    :class="{ 'black-key': isBlack, 'white-key': !isBlack }"
-  ></button>
+    class="btn btn-sm btn-outline-dark"
+    @mousedown="attack"
+    @mouseup="release"
+    :class="{ 'bg-dark text-light': isBlack, 'bg-light text-dark': !isBlack }"
+  >
+    {{ note }}
+  </button>
 </template>
 
 <script lang="ts">
@@ -26,25 +30,19 @@ export default defineComponent({
     },
   },
   methods: {
-    play() {
-      this.synth?.triggerAttackRelease(this.note, "8n");
+    attack() {
+      this.synth?.triggerAttack(this.note);
+    },
+    release() {
+      this.synth?.triggerRelease();
     },
   },
 });
 </script>
 
-<style scoped>
-.black-key {
-  width: 3em;
-  height: 9em;
-  color: white;
-  background-color: black;
-}
-
-.white-key {
-  width: 5em;
-  height: 15em;
-  color: black;
-  background-color: white;
+<style lang="scss" scoped>
+@import "@/assets/variables.scss";
+.bg-dark {
+  height: calc($keyboard-min-height * 8.9 / 14.1);
 }
 </style>
