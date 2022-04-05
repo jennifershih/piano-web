@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "html-css-class-completion.includeGlobPattern": "**/*.{css,html.vue}",
+}
