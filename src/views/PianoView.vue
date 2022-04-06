@@ -1,8 +1,6 @@
 <template>
-  <div class="fixed-bottom">
-    <ControlPanel />
-    <Keyboard />
-  </div>
+  <ControlPanel />
+  <Keyboard />
 </template>
 
 <script lang="ts">

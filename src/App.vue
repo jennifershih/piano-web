@@ -16,6 +16,7 @@
   <main>
     <RouterView />
   </main>
+  <footer class="footer-copyright text-center">© 2022 Jennifer Shih</footer>
 </template>
 
 <style lang="scss">

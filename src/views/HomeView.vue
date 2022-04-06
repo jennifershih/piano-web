@@ -1,12 +1,9 @@
 <template>
-  <div class="home">
-    <h3 class="text-center">線上鋼琴介紹</h3>
-    <p class="text-center fs-5">使用 Vue.js、Bootstrap 做出的線上鋼琴。</p>
-
-    <h3 class="text-center">如何使用這台線上鋼琴？</h3>
-    <p class="text-center fs-5">
-      每個琴鍵會對應到不同的音檔，可以使用滑鼠來彈奏每個鍵。
-    </p>
+  <div class="container-fluid text-center">
+    <h1>線上鋼琴</h1>
+    <p>使用 Vue.js、Bootstrap 做出的線上鋼琴。</p>
+    <p>用滑鼠來彈奏鋼琴，每個琴鍵會對應到不同的音調。</p>
+    <a href="/piano" class="btn btn-lg btn-success">開始彈奏</a>
   </div>
 </template>
 
